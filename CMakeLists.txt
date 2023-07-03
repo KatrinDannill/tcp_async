@@ -11,5 +11,5 @@ set(SOURCE_FILES
 if(Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIRS})
     add_executable(Server${SOURCE_FILES})
-    target_link_libraries(Server${Boost_LIBRARIES})
+    target_link_libraries(Server Boost::system Boost::asio)
 endif()
