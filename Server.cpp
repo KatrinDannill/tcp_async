@@ -115,10 +115,6 @@ int main(int argc, char* argv[])
             std::cerr << "Usage: Server <port>\n";
             return 1;
         }
-        else
-        {
-            std::cout << "Thats good";
-        }
         boost::asio::io_context io_context;
         server s(io_context, std::atoi(argv[1]));
         s.do_accept();
